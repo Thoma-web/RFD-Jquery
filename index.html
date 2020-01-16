@@ -3,36 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="./assets/js/jquery.css"></script>
+    <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/jquery-ui.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <div id="michel">
-      <h1>Titre 1</h1>
-      <p>Ceci est un paragraphe</p>
-      <h1>Titre 1</h1>
-      <p>Ceci est un paragraphe</p>
-      <h1>Titre 1</h1>
-      <p>Ceci est un paragraphe</p>
-    </div>
-    <script>
-      $(function() {
-        $("#michel").accordion();
-      });
-    </script>
-    <script>
+    <script type="text/javascript">
       $(document).ready(function() {
-        $("#cacher").click(function() {
-          $("p").fadeOut(2000);
-        });
-        $("#afficher").click(function() {
-          $("p").fadeIn(4000);
+        $("ul.menu ul.sousMenu").hide();
+        $("ul.menu ul.sousMenu span").each(function()
+          $(this).replaceWith('<a href="" title="Afficher">' + $(this).text()) + '</a>');
         })
       });
     </script>
-    <p>Je suis Michel</p>
-    <button id="afficher">Afficher</button>
-    <button id="cacher">Cacher</button>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Menu 1</a></li>
+          <li class="switchMenu"><span>Menu 2</span>
+            <ul class="sousMenu">
+              <li><a href="#">Sous-menu 1</a></li>
+              <li><a href="#">Sous-menu 2</a></li>
+              <li><a href="#">Sous-menu 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>

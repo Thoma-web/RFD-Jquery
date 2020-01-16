@@ -4,9 +4,23 @@
     <meta charset="utf-8">
     <title></title>
     <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/jquery-ui.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <div id="michel">
+      <h1>Titre 1</h1>
+      <p>Ceci est un paragraphe</p>
+      <h1>Titre 1</h1>
+      <p>Ceci est un paragraphe</p>
+      <h1>Titre 1</h1>
+      <p>Ceci est un paragraphe</p>
+    </div>
+    <script>
+      $(function() {
+        $("#michel").accordion();
+      });
+    </script>
     <script>
       $(document).ready(function() {
         $("#cacher").click(function() {
